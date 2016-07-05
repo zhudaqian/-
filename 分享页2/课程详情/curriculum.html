@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html style="font-size: 100px">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>沙龙标题</title>
+    <script type="text/javascript" src="..\js/zepto.min.js"></script>
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded",function(){
+            var dw=$(window).width();
+            if(dw>=750){
+                dw=750;
+            }
+            var x=100*dw/375;
+            $("html").css({"font-size": x+'px'});
+        },false);
+    </script>
+    <link  type="text/css" rel="stylesheet" href="css/class.css">
+</head>
+<body>
+<div class="top"></div>
+<div class="clearFloat" style="width: 750px;margin: 0px auto" >
+    <header class="s_header" >
+        <div class="clearfix pl10 pr10">
+            <div class="fl logo-box">
+                <div class="fl logo"><img src="http://static.img.xywy.com/3g_sl/images/logo.png" alt="logo"></div>
+                <div class="fl logo-txt">
+                    <span class="logo-tit">巧育儿</span>
+                    <span class="logo-title">发现更好的育儿</span>
+                </div>
+            </div>
+            <a class="down-load fr" id="hit" href="#">下载APP</a>
+        </div>
+    </header>
+    <div class="clear"></div>
+</div>
+<section class="banner">
+    <div class="courseCover">
+        <img src="image/banner.png" alt="课程封面">
+    </div>
+    <div class="playButton">
+        <img  src="image/play.png" alt="播放按钮">
+    </div>
+</section>
+<section class="courseIntroduce">
+    <div class="caption">
+        <h1><span>家庭早教该如何进行</span></h1>
+    </div>
+    <div class="course-browse">
+
+    </div>
+</section>
+</body>
+</html>
+<script src="..\js/index.js"></script>
+<!--<script type="text/javascript" src="js/.js"></script>-->
+<script type="text/javascript" src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.4.min.js"></script>

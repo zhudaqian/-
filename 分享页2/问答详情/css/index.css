@@ -1,0 +1,326 @@
+body{
+    font-size: 0.14rem;
+}
+html, body {
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+img{
+    max-width: 100%;
+    margin:0 auto;
+}
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{
+    margin:0;padding:0
+}
+article,aside,footer,header,nav,section,audio,canvas,video,img{
+     display:block
+ }
+html,body{
+    font-family:Microsoft YaHei,Helvetica,STHeiti,Droid Sans Fallback;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+}
+textarea{
+    resize:none
+}
+iframe,img{
+    border:0}
+input[type=text],input[type=button],input[type=submit],input[type=reset],button{
+    -webkit-appearance:none}
+ul,ol{
+    list-style:none
+}
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+.fl{
+    float: left;
+    display: inline;
+}
+.fr {
+    float: right;
+    display: inline;
+}
+.pt10{padding-top: 0.1rem}
+.pb10{padding-bottom: 0.1rem}
+.pl10 {
+    padding-left: 0.1rem;
+}
+.pr10 {
+    padding-right: 0.1rem;
+}
+.mt15{margin-top: 0.15rem}
+.mr20{margin-right: 0.2rem}
+.mr25{
+    margin-right: 0.25rem;
+}
+.mb10{margin-bottom: 0.1rem}
+.bb1{
+    border-bottom: 1px solid rgba(202, 202, 202, 0.7);
+}
+.clear{clear: both}
+.pa {
+    position: absolute;
+}
+/*蒙版*/
+#gradual{
+     background: -webkit-linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Safari 5.1 - 6.0 */
+     background: -o-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Opera 11.1 - 12.0 */
+     background: -moz-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Firefox 3.6 - 15 */
+     background: linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* 标准的语法（必须放在最后） */
+ }
+/*头部*/
+.top{
+    width:100%;
+    height: 0.6rem;
+    border-bottom: 1px solid #ebe9ea;
+    background:#fff;
+}
+.s_header{
+    width:3.75rem;
+    height: 0.6rem;
+    border-bottom: 1px solid #ebe9ea;
+    background:#fff;
+    position:fixed;
+    top:0;
+    z-index:100;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.logo-box{
+    width:60%;
+    margin-top:0.1rem;
+}
+.logo {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.logo-txt {
+    font-size: 0.13rem;
+    margin-top: 0.03rem;
+    margin-left: 0.15rem;
+}
+.logo-tit {
+    color: #17a87d;
+    display: block;
+}
+.logo-title{
+    display: block;
+    margin-top:0.05rem;
+}
+.down-load {
+    height: 0.26rem;
+    padding: 0 0.08rem;
+    margin-top: 0.17rem;
+    font-size: 0.13rem;
+    background: #17a87d;
+    border-radius: 0.04rem;
+    line-height: 0.27rem;
+    color: #ffffff;
+}
+.clearFloat{overflow: hidden;clear: both}
+/*体*/
+.content{
+    margin: 0 0.1rem;
+}
+.tagList{
+    margin-top: 0.2rem;
+    width: 100%;
+}
+.list li:last-child{
+    margin-right: 0px;
+}
+.list li {
+    display: inline-block;
+    padding: 0.02rem 0.1rem;
+    margin-right: 0.1rem;
+    border-radius: 4px;
+    /*opacity: 0.3;*/
+}
+.list li b{
+    z-index: 1;
+    opacity: 55;
+}
+.problemTitle{
+    color: rgb(52,52,52);
+    font-size: 0.17rem;
+}
+.smallTitle{
+    font-size: 0.16rem;
+    color: #646464;
+}
+.question_views{
+    font-size: 0.13rem;
+    margin: 0.14rem 0;
+}
+.question_views img{
+    max-height: 0.12rem;
+
+    display: inline-block;
+}
+.question_views .browse,.question_views .follow{
+    display: inline-block;
+}
+.question_views .browse{
+    margin-right: 0.3rem;
+}
+.question_views .num{
+    margin-left: 0.05rem;
+    margin-right: 2px;
+}
+.answer_num {
+    width: 100%;
+    border-top:1px solid #E4E4E4 ;
+    border-bottom: 1px solid #E4E4E4;
+    height: .4rem;
+    line-height: .4rem;
+}
+.answer_num_num {
+    margin: 0 auto;
+    width: 95%;
+    font-size: .14rem;
+    color: #9E9E9E;
+}
+.s-other-con{padding:.15rem .1rem; border-bottom:1px solid rgba(202, 202, 202, 0.7)}
+.s-other-img{
+    width:.5rem; height:.5rem;
+    border-radius:50%;
+    position: relative;
+}
+.s-other-img img{
+    width:.5rem;
+    max-width:100px;
+    height:.5rem;
+    border-radius:50%;
+}
+.s-other-name{
+    padding-top: 0.1rem;
+    padding-bottom: 0.02rem;
+    font-weight: 700}
+.location img{
+    display: inline-block;
+    height: .12rem;
+    max-height: 12px;
+    margin: 0;
+    margin-right: 4px;
+}
+.s-other-txt{
+    display: inline-block;
+    width: 82%;
+    margin-left: 0.1rem;
+    clear: both;
+}
+.userInformation li{
+    display: inline-block;
+    color: #9E9E9E;
+    font-size: 0.12rem;
+
+}
+.userInformation{
+    width: 100%;
+    overflow: hidden;
+}
+.location{
+    float: right;
+}
+.Pregnancy{
+    width: 1.6rem;
+    margin: 0 auto;
+    text-align: center;
+}
+.s-other-psg{
+    margin-top:0.1rem;
+    line-height:.2rem;}
+.s-talk-res{
+    width:auto;
+}
+.s-other-ret{
+    margin-top: 0.18rem;
+}
+.s-other-ret .s-zan{
+    height: 0.23rem;
+    line-height: 0.23rem;;
+    padding:0 6px;
+    background:#D9F1FB;
+    border-radius:3px;
+    color: #029bF2;
+}
+.col-blue{
+    color:#029bF2;
+}
+.s-bdr1{
+    color:#029bF2;
+    margin:0 6px;
+    font-size:0.12rem;
+}
+.s-other-ret .s-ruo{
+    height:0.23rem;
+    line-height: 0.23rem;
+    padding:0 6px;
+    background:#d9f1fb;
+    border-radius:3px;
+}
+.dn-hand1,.up-hand1{
+    width:0.15rem;
+    height:0.15rem;
+    margin-top:0.04rem;
+    background:url(http://static.img.xywy.com/3g_sl/images/dn-hand1.png) no-repeat;
+    background-size:0.15rem 0.15rem;
+}
+.up-hand1{
+    background:url(http://static.img.xywy.com/3g_sl/images/up-hand2.png)  no-repeat;
+    background-size:0.15rem 0.15rem;
+}
+.ico-v2{
+    width: 0.15rem;
+    height: 0.15rem;
+    background:url(http://static.img.xywy.com/3g_sl/images/v2.png) no-repeat;
+    background-size:0.16rem 0.16rem;
+    right:0;
+    bottom:0;
+}
+
+.s-bdr2{ color:#029bf2; margin:0 6px; font-size:0.12rem;}
+.s-talk-box{ color:#17a87d;line-height: 0.23rem }
+.s-talk-num{ padding:0 6px; margin-left:4px; background:#b8efdf; border-radius:3px;}
+.s-ruo{margin-left:0.03rem;}
+/*问题详情页的*/
+.s-other{
+    position: relative;
+    padding-top: 0.12rem;
+    min-height: 60%;
+    border-top: 1px solid rgba(202, 202, 202, 0.7);
+}
+.aboutMargin{
+    margin-left:0.1rem;
+    margin-right: 0.1rem;
+}
+.pa15{
+    position: absolute;
+    bottom: 15px;
+}
+.describe{
+    font-size: 0.12rem;
+    color: #9E9E9E;
+}
+.mat{
+     margin-top: 0.25rem;
+     width: 2.57rem;
+     height: 0.49rem;
+ }
+
+/*http://app.qiaoyuer.com/index.php?&m=Vcourse&a=share&id=35&type=1!**!*/
+/*http://888.qiaoyuer.applinzi.com/v1.2.2/#g=1&p=课程3g分享页*/

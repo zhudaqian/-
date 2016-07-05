@@ -1,0 +1,167 @@
+body{
+    font-size: 0.14rem;
+}
+html, body {
+    height: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+}
+img{
+    margin:0 auto;
+}
+body,div,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,iframe,input,textarea,select,label,article,aside,footer,header,menu,nav,section,time,audio,video{
+    margin:0;padding:0
+}
+article,aside,footer,header,nav,section,audio,canvas,video,img{
+    display:block
+}
+html,body{
+    font-family:Microsoft YaHei,Helvetica,STHeiti,Droid Sans Fallback;
+    -webkit-text-size-adjust:100%;
+    -ms-text-size-adjust:100%;
+}
+textarea{
+    resize:none
+}
+iframe,img{
+    border:0}
+input[type=text],input[type=button],input[type=submit],input[type=reset],button{
+    -webkit-appearance:none}
+ul,ol{
+    list-style:none
+}
+a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255,0,0,0);
+}
+i{font-style: normal;}
+.fl{
+    float: left;
+    display: inline;
+}
+.fr {
+    float: right;
+    display: inline;
+}
+.pt10{padding-top: 0.1rem}
+.pb10{padding-bottom: 0.1rem}
+.pl10 {
+    padding-left: 0.1rem;
+}
+.pr10 {
+    padding-right: 0.1rem;
+}
+/*上外邊距*/
+.mt5 {margin-top:0.05rem;}
+.mt15{margin-top: 0.15rem}
+.mt20 {margin-top: 0.2rem;}
+.mr20{margin-right: 0.2rem}
+.mr25{ margin-right: 0.25rem;}
+/*下邊距*/
+.mb10{margin-bottom: 0.1rem}
+/*左邊距*/
+.ml6{margin-left: 0.06rem;}
+/*字體*/
+.fs13{font-size: .13rem}
+.fs12{font-size: .12rem}
+/*上下分割線*/
+.bb1{border-bottom: 1px solid rgba(202, 202, 202, 0.7);}
+.bt1{border-bottom: 1px solid rgba(202, 202, 202, 0.7);}
+.clear{clear: both}
+.pa {position: absolute;}
+/*头部*/
+.top{
+    width:100%;
+    height: 0.6rem;
+    border-bottom: 1px solid #ebe9ea;
+    background:#fff;
+}
+.s_header{
+    width:3.75rem;
+    height: 0.6rem;
+    border-bottom: 1px solid #ebe9ea;
+    background:#fff;
+    position:fixed;
+    top:0;
+    z-index:100;
+}
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.logo-box{
+    width:60%;
+    margin-top:0.1rem;
+}
+.logo {
+    width: 0.4rem;
+    height: 0.4rem;
+}
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+.logo-txt {
+    font-size: 0.13rem;
+    margin-top: 0.03rem;
+    margin-left: 0.15rem;
+}
+.logo-tit {
+    color: #17a87d;
+    display: block;
+}
+.logo-title{
+    display: block;
+    margin-top:0.05rem;
+}
+.down-load {
+    height: 0.26rem;
+    padding: 0 0.08rem;
+    margin-top: 0.17rem;
+    font-size: 0.13rem;
+    background: #17a87d;
+    border-radius: 0.04rem;
+    line-height: 0.27rem;
+    color: #ffffff;
+}
+.clearFloat{overflow: hidden;clear: both}
+/*课程介绍*/
+.banner{/*封面*/
+    position: relative;
+}
+.courseCover img{
+     max-width: 100%;
+ }
+.playButton img{
+    max-width: 100%;
+}
+.courseCover{
+    position: relative;
+}
+
+.playButton{
+    width:0.6rem ;
+    height: 0.6rem;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-left:-0.3rem;
+    margin-top: -0.3rem;
+}
+.courseIntroduce{
+    padding: 0.19rem 0.2rem  0.15rem 0.2rem;
+}
+.caption h1{
+    font-size: 0.19rem;
+    color: #373737;
+    font-weight: 600;
+}
+.caption h1 span{
+    padding-bottom:0.15rem;
+    border-bottom: 2px solid #d0cfcf;
+}

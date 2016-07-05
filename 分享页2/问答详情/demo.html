@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <!--<script src="http://static.wkimg.com/common/lib/mobile/zepto/1.0.1/zepto.min.js"></script>-->
+    <title>分享沙龙</title>
+
+    <link rel="stylesheet" href="http://static.wkimg.com/common/ui/base/m_reset.css"/>
+    <link rel="stylesheet" href="http://static.css.xywy.com/3g_sl/css/main.css"/>
+    <script type="text/javascript" src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.4.min.js"></script>
+    <style type="text/css">
+    .banner {
+    background: url("http://app.qiaoyuer.com/attachments/146/538/10/dcd906eac86c29af680b9d97f8ea693f.jpeg") no-repeat !important;
+    background-size:100% 100% !important;
+    }
+    .s-other-con{
+    margin-bottom: 10px;
+    }
+    .logo img {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .logo {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .s-hide-hd {
+        height: 0.6rem;
+    }
+    .s_header{
+        height: 0.6rem;
+        border-bottom: 1px solid #ebe9ea;
+    }
+    .pr10 {
+        padding-right: 0.1rem;
+    }
+    .pl10 {
+        padding-left: 0.1rem;
+    }
+    .mt5 {
+        margin-top:0.05rem;
+    }
+    .logo-txt {
+         font-size: 0.13rem;
+         margin-top: 0.03rem;
+     }
+    .ml5 {
+           margin-left: 0.15rem;
+       }
+    .s-zj-name {
+            padding-top: 0.04rem;
+        }
+    .down-load {
+            height: 0.26rem;
+            padding: 0 0.08rem;
+            margin-top: 0.17rem;
+            font-size: 0.13rem;
+            background: #17a87d;
+            border-radius: 0.04rem;
+            line-height: 0.27rem;
+        }
+    .s-art {
+        font-size: 0.15rem;
+        padding: 0.1rem 20px;
+        color: #383838;
+        line-height: 0.24rem;
+        background: #fff;
+        border-bottom: 1px solid #cacaca;
+    }
+    .s-top {
+        padding: 0.85rem 0.3rem 0.2rem 0.2rem;
+    }
+    .s-top-indr {
+        margin-top: 0.4rem;
+        font-size: 0.2rem;
+        line-height: 0.18rem;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    }
+    .s-zj-img {
+         width: 0.4rem;
+         height: 0.4rem;
+         border: 1px solid #dbdbdb;
+         border-radius: 50%;
+     }
+    .s-zj-txt {
+          color: #fff;
+          line-height: 0.15rem!important;
+          margin-left: 0.5rem;
+      }
+    .ico-v {
+         width: 0.15rem;
+         height: 0.15rem;
+         background-size: 0.13rem 0.13rem;
+         right: 0;
+         bottom: 0;
+     }
+    .f14 {
+         font-size: 0.15rem;
+     }
+    .s-zj-img img {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .s-zj-txt {
+        color: #fff;
+        line-height: 0.18rem;
+        margin-left: 65px;
+    }
+    .mt10 {
+         margin-top: 0.2rem;
+     }
+    .ml6{
+        margin-left: 0.06rem;
+    }
+    .s-top-data {
+        width:1.1rem;
+        line-height: 0.24rem;
+        z-index: 1;
+        font-size: 0.14rem;
+    }
+    .s-top-data {
+        color: #fff;
+        margin-top: 0;
+    }
+    .s-top-mark {
+         height: 0.2rem;
+         width: 0.4rem;
+          padding: 0;
+         font-size: 14px;
+         background: rgba(0,0,0,0.6);
+         border: 2px solid rgba(255,255,255,0.8);
+         border-radius: 6px;
+         line-height: 0.21rem;
+         text-align: center;
+         color: #bcdbdb;
+     }
+    #gradual{
+        background: -webkit-linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Firefox 3.6 - 15 */
+        background: linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* 标准的语法（必须放在最后） */
+    }
+    <!--</style><!--后写的样式都在这-->
+</head>
+<body style="font-size: 20px">
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'><!--增加结构 链接是微信分享缩略图，-->
+    <img src="" width='3.5rem'height="3.5rem">
+</div>
+    <header class="s_header ">
+        <div class=" clearfix pl10 pr10">
+            <div class="logo-box fl ">
+                <div class="fl logo"><img src="http://static.img.xywy.com/3g_sl/images/logo.png" alt="logo" /></div>
+                <div class="fl logo-txt ml5">
+                    <span class="logo-tit  db">巧育儿</span>
+                    <span class="db mt5">升级你的育儿</span><!--去掉了类名lh150-->
+                </div>
+            </div>
+            <a class="down-load fr" id="hit" href="#">下载APP</a>
+        </div>  
+    </header>
+     <div class="s-hide-hd"></div>
+    <section>
+        <div class="banner">
+            <div id="gradual"><!--此层结构为后增加，用于蒙版层-->
+            <div class="pl20 pr20 s-top">
+                <div class="clearfix">
+                    <div class="fl s-zj-img pr">
+                        <img src="http://app.qiaoyuer.com/attachments/default/41.png" alt="头像" />
+                        <span class="ico-v pa"></span>
+                    </div>
+                    <dl class="s-zj-txt f14">
+                        <dt class="s-zj-name ">熊大是喜洋洋知己</dt>
+                        <dd class="mt5">人生是场旅行</dd>
+                    </dl>
+                </div>
+                <p class="s-top-indr ">制服哺乳，为什么你只觉得诱惑？</p>
+                <div class="mt10 clearfix">
+                    <span class="fl f14 s-top-mark">喂奶</span>
+                    <div class="fr s-top-data">
+                        <!--将下面的i标签的类名ML5换成ml6-->
+                        <div class="fl"><span class="ico-eye dib vm"></span><i class="dib vm ml6">105</i></div>
+                        <div class="fr"><span class="ico-ly dib vm"></span><i class="dib vm ml6">2</i></div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section>
+            <div class="s-art">
+                <p><p><img src="http://app.qiaoyuer.com/attachments/146/538/08/99ac4ee750aa6fa78f2ed264930e151b.jpg" title="QQ图片20160608174110.jpg" style="float:none;" border="0" hspace="0" vspace="0" /><br /></p><p><span style="">最近，网上一组关于不同行业妈妈们身着制服哺乳的照片再次引发了热议。不过在看到很多新闻在报道这件事情时，一些刺眼的标题让我不能忍了。</span></p><p><span style=""><br /></span></p><p><span style="">什么“秀傲人身材”“制服诱惑”“画面不敢看”之类的字眼，怎么让人这么不舒服呢。难道那些人只看到了女人的身份，却不知道她们同时也是妈妈，需要喂养孩子吗？</span></p><p><span style="">&nbsp;</span></p><p><span style="">妈妈给孩子哺乳，怎么就成诱惑了？难道妈妈在给孩子喂奶时，还会想着什么姿势诱惑？她们母乳喂养时，就不能首先想到她们是妈妈吗？&nbsp;</span></p><p><span style=""><br /></span></p><p><span style="">制服哺乳，不是一个人的战斗</span></p><p><span style="">关于穿制服哺乳的事件，这不是第一起了。</span></p><p><span style="">几年前，一张美国女军人身着军装哺乳的照片引起了广泛关注。</span></p><p><img src="http://app.qiaoyuer.com/attachments/146/538/09/673c960689b7998c195120fd0989ff8b.jpg" style="float:none;" title="QQ图片20160608174121.jpg" border="0" hspace="0" vspace="0" /><span style="">两位在服役的军人母亲在空军基地的空地上坐着喂养她们的乳儿，其中一位女军人正在给她的双胞胎女儿喂奶，另一位女军人也在给自己的孩子喂母乳。</span><br /></p><p><br /></p><p><span style="">这张照片是受一家旨在推动哺乳期妇女在公共场合母乳喂养孩子做法的组织的请求而拍摄的。</span></p><p><br /></p><p><span style="">支持者认为，她们作为母亲，母乳喂养自己的孩子是她们的“基本权利”。</span></p><p><span style=""><br /></span></p><p><span style="">而反对者则表示，这种行为简直是“穿着制服大便”。</span></p><p><br /></p><p><span style="">去年，一张10位美国女兵身着军装为其孩子哺乳的照片红遍网络，在Facebook上被分享近7000次。拍摄该照片的人士指出，此举意在推动军中哺乳“正常化”。</span></p><p><img src="http://app.qiaoyuer.com/attachments/146/538/09/4040c22e919f97aaf886c30dc6bfcea5.jpg" style="float:none;" title="QQ图片20160608174103.jpg" border="0" hspace="0" vspace="0" /><span style="">每次，这样的照片一出现，就会有不同的声音。</span><br /></p><p><span style=""><br /></span></p><p><span style="">妈妈哺乳那些事儿</span></p><p><span style="">关于妈妈们哺乳，无论是之前炒的沸沸扬扬的“公共场合哺乳”，还是现在“身着制服哺乳”，一直都是争议不断的。</span></p><p><br /></p><p><span style="">妈妈给孩子哺乳，天经地义，是神圣不容侵犯的行为；</span></p><p><span style="">为什么穿着制服哺乳就成了“穿着制服大便”？<br /></span></p><p><span style="">为什么公共场合哺乳就成了“裸露性器官”？</span></p><p><br /></p><p><strong>为什么要在公共场合哺乳？</strong></p><p><span style="">我想没当过妈妈的人是没有发言权的。如果不是孩子饿了哭闹，或者确实到了不得不给孩子喂奶的时候，哪个妈妈会愿意在公众场合给孩子喂奶，尤其是还要承受周围各种异样的眼光，妈妈们就没有心理压力吗？为了孩子，还不是顶着压力忍了。</span></p><p><br /></p><p><span style="">再说，妈妈们不得已在“大庭广众”之下哺乳，还不是因为公共场所总是缺少适合妈妈们哺乳的相关场所。如果公共场所有育婴室，让妈妈们可以在特定的小场所里给孩子喂奶或者换衣物，既能保护自己和孩子的隐私，又不影响到周围的人群。哪个妈妈还会在大众的眼光下给孩子哺乳呢？</span></p><p><br /></p><p><span style="">现实条件达不到，孩子又确实需要母亲的哺乳，那就请大家给公共场合哺乳的妈妈们多一点宽容和理解了。</span></p><p><br /></p><p><strong><span style="">为什么要穿制服哺乳？</span></strong></p><p><span style="">拍摄此系列照片的摄影师塔拉·鲁比表示：“拍摄这组照片的初衷是想表达母亲们能够同时兼顾全职妈妈和全职工作两件事，没有要传达任何负面信息，”她说，“如果这样做能够给予他人力量，我就会做下去。”</span></p><p><br /></p><p><span style="">大家不能忽略的一个问题，就是很多身在职场的女性，同时也是妈妈。对于孩子来说，母乳是最好的口粮，而母乳喂养更是增进孩子与母亲亲密的纽带。可是作为职场妈妈，有时工作和孩子总是不能兼顾，难道选择了工作就得放弃娃吗？当然不能，就算身在职场，也该给孩子最原始的爱啊。</span></p><p><br /></p><p><span style="">无论是护士、医生、教师还是歌舞演员，就算穿着制服哺乳，她们也是美丽的职场妈妈啊。</span></p><p><img src="http://app.qiaoyuer.com/attachments/146/538/10/cf4b96893ffabdc9b01b1a07553a7709.jpg" style="float:none;" title="QQ图片20160608174055.jpg" border="0" hspace="0" vspace="0" /><br /></p><p><img src="http://app.qiaoyuer.com/attachments/146/538/10/752778b30884485509f3bebee5656b43.jpg" style="float:none;" title="QQ图片20160608174107.jpg" border="0" hspace="0" vspace="0" /><br /></p><p>妈妈们穿制服哺乳工作的同时，要兼顾母亲的角色，你是怎么看的呢？</p></p>
+				            </div>
+        </section>
+
+            <!--点击查看完整沙龙显示的内容  END!-->
+</body>
+       <script>
+        $(function(){
+            var tmp = $('#temp').html();
+            $('.s-more-sec').on('click',function(){
+                $('.s-more-sec').hide();
+                $('.s-temp').html(tmp)
+            });
+            // var wei = navigator.userAgent.toLowerCase();
+            //微信不打开应用
+            // if(!(wei.match(/MicroMessenger/i)=="micromessenger")){
+                //获取地址栏参数
+                var $_GET = (function(){
+                    var url = window.document.location.href.toString();
+                    var u = url.split("?");
+                    if(typeof(u[1]) == "string"){
+                        u = u[1].split("&");
+                        var get = {};
+                        for(var i in u){
+                            var j = u[i].split("=");
+                            get[j[0]] = j[1];
+                        }
+                        return get;
+                    } else {
+                        return {};
+                    }
+                })();
+                var data,string_data;
+                var relationtype = $_GET['type'];
+                if(relationtype == 1){
+                    data = {
+                        type : 11,
+                        sid: $_GET['id'],
+                    };
+                    string_data = 'type='+relationtype+"&sid="+$_GET['id'];
+                }
+                if(relationtype == 2){
+                    data = {
+                        type : 12,
+                        sid: $_GET['sid'],
+                        did: $_GET['id'],
+                        pid: $_GET['pid'],
+                    };
+                    string_data = 'type=12&sid='+$_GET['sid']+'&did='+$_GET['id'];
+                }
+                if(relationtype == 3){
+                    data = {
+                        type : 13,
+                        sid: $_GET['sid'],
+                        did: $_GET['id'],
+                    };
+                    string_data = 'type=13&sid='+$_GET['sid']+'&did='+$_GET['id']+'&pid='+$_GET['pid'];
+                }
+                //判断设备室iOS还是Android
+                var u = navigator.userAgent, app = navigator.appVersion;
+                var android = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端
+                var iPhone = u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1; //为iPhone
+                //如果Android设备打开
+                if (android) {
+                    var ua = navigator.userAgent.toLowerCase();
+                    var t;
+                    var config = {
+                        /*scheme:必须*/
+                        scheme_Adr: "qiaoyuer://splash/?"+string_data,
+                        download_url: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.xywy.qye',
+                        timeout: 600
+                    };
+                    function openclient() {
+                        var UA = navigator.userAgent.toLowerCase();
+                        if((UA.indexOf('qqbrowser')>-1)){
+                            alert("请在其他浏览器打开！");
+                        }else{
+                            var startTime = Date.now();
+                            var ifr = document.createElement('iframe');
+                            ifr.src = ua.indexOf('os') > 0 ? config.scheme_IOS : config.scheme_Adr;
+                            ifr.style.display = 'none';
+                            document.body.appendChild(ifr);
+                            var t = setTimeout(function() {
+                                var endTime = Date.now();
+                                if (!startTime || endTime - startTime < config.timeout + 200) {
+                                    window.location = config.download_url;
+                                } else {
+                                    window.close();
+                                }
+                            }, config.timeout);
+                            window.onblur = function() {
+                                clearTimeout(t);
+                            }
+                        }
+                    }
+                    window.addEventListener("DOMContentLoaded", function(){
+                        document.getElementById("hit").addEventListener('click',openclient,false);
+                    }, false);
+                }
+                //iOS苹果设备
+                if (iPhone) {
+                    var appid = '847b4c1f0757677b';
+                    var params = {
+                        inapp_data : data,
+                        channels:["chanName1_chanType1_chanNumber1"],
+                        sender_id : "senderID",
+                        download_title : "这一次我们发现更好的育儿",
+                        download_msg : "这一次我们发现更好的育儿",
+                    };
+                    deepshare = new DeepShare(appid);
+                    deepshare.BindParams(params);
+                    document.getElementById('hit').addEventListener('click', function() {
+                        deepshare.Start();  // 开始跳转，调用后将立即跳转到目标（下载页面或APP内部）
+                    },false);
+                }
+            // }
+        });
+        </script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function(){
+        var x=100*$(this).width()/375;
+        $("html").css({"font-size": x+'px'});
+    },false)
+
+
+</script>
+
+</html>

@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en" style="font-size: 100px;">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,initial-scale=1.0" />
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="yes" name="apple-touch-fullscreen" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no" name="format-detection" />
+    <script src="http://static.wkimg.com/common/lib/mobile/zepto/1.0.1/zepto.min.js"></script> 
+    <title><if condition="$data['type'] eq 1">分享沙龙<elseif condition="$data['type'] eq 2" />分享讨论组<else />分享讨论</if></title>
+    <link rel="stylesheet" href="http://static.wkimg.com/common/ui/base/m_reset.css"/>
+    <link rel="stylesheet" href="http://static.css.xywy.com/3g_sl/css/main.css"/>
+    <script type="text/javascript" src="__PUBLIC__/Home/share/jquery.js"></script>
+    <script type="text/javascript" src="http://7xp89t.com1.z0.glb.clouddn.com/deepshare_v2.4.min.js"></script>
+    <style type="text/css">
+    .banner {
+    background: url("http://app.qiaoyuer.com/attachments/146/538/10/dcd906eac86c29af680b9d97f8ea693f.jpeg") no-repeat !important;
+    background-size:100% 100% !important;
+    }
+    .s-other-con{
+    margin-bottom: 10px;
+    }
+    .logo img {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .logo {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .s-hide-hd {
+        height: 0.6rem;
+    }
+    .s_header{
+        height: 0.6rem;
+        border-bottom: 1px solid #ebe9ea;
+    }
+    .pr10 {
+        padding-right: 0.1rem;
+    }
+    .pl10 {
+        padding-left: 0.1rem;
+    }
+    .mt5 {
+        margin-top:0.05rem;
+    }
+    .logo-txt {
+         font-size: 0.13rem;
+         margin-top: 0.03rem;
+     }
+    .ml5 {
+           margin-left: 0.15rem;
+       }
+    .s-zj-name {
+            padding-top: 0.04rem;
+        }
+    .down-load {
+            height: 0.26rem;
+            padding: 0 0.08rem;
+            margin-top: 0.17rem;
+            font-size: 0.13rem;
+            background: #17a87d;
+            border-radius: 0.04rem;
+            line-height: 0.27rem;
+        }
+    .s-art {
+        font-size: 0.15rem;
+        padding: 0.1rem 20px;
+        color: #383838;
+        line-height: 0.24rem;
+        background: #fff;
+        border-bottom: 1px solid #cacaca;
+    }
+    .s-top {
+        padding: 0.85rem 0.3rem 0.2rem 0.2rem;
+    }
+    .s-top-indr {
+        margin-top: 0.4rem;
+        font-size: 0.2rem;
+        line-height: 0.18rem;
+        color: #fff;
+        text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+    }
+    .s-zj-img {
+         width: 0.4rem;
+         height: 0.4rem;
+         border: 1px solid #dbdbdb;
+         border-radius: 50%;
+     }
+    .s-zj-txt {
+          color: #fff;
+          line-height: 0.15rem!important;
+          margin-left: 0.5rem;
+      }
+    .ico-v {
+         width: 0.15rem;
+         height: 0.15rem;
+         background-size: 0.13rem 0.13rem;
+         right: 0;
+         bottom: 0;
+     }
+    .f14 {
+         font-size: 0.15rem;
+     }
+    .s-zj-img img {
+        width: 0.4rem;
+        height: 0.4rem;
+    }
+    .s-zj-txt {
+        color: #fff;
+        line-height: 0.18rem;
+        margin-left: 65px;
+    }
+    .mt10 {
+         margin-top: 0.2rem;
+     }
+    .ml6{
+        margin-left: 0.06rem;
+    }
+    .s-top-data {
+        width:1.1rem;
+        line-height: 0.24rem;
+        z-index: 1;
+        font-size: 0.14rem;
+    }
+    .s-top-data {
+        color: #fff;
+        margin-top: 0;
+    }
+    .s-top-mark {
+         height: 0.2rem;
+         width: 0.4rem;
+          padding: 0;
+         font-size: 14px;
+         background: rgba(0,0,0,0.6);
+         border: 2px solid rgba(255,255,255,0.8);
+         border-radius: 6px;
+         line-height: 0.21rem;
+         text-align: center;
+         color: #bcdbdb;
+     }
+    #gradual{
+        background: -webkit-linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Safari 5.1 - 6.0 */
+        background: -o-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Opera 11.1 - 12.0 */
+        background: -moz-linear-gradient(  rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* Firefox 3.6 - 15 */
+        background: linear-gradient( rgba(253,130,56,0.1), rgba(18,177,129,0.6)); /* 标准的语法（必须放在最后） */
+    }
+                   
+
+
+
+         /*新增*/
+
+
+
+
+
+    .s-select{
+        margin: 0.08rem;
+    }
+    .s-select-vote {
+    line-height: 0.45rem;
+    color: #17a87d;
+    font-size: 0.16rem;
+}
+.s-select-tag {
+    border-bottom: 1px solid #eaeaea;
+    font-size: 14px;
+    line-height: 0.4rem;
+}
+    .s-select-tit {
+    line-height: 0.22rem;
+    font-size: 0.14rem;
+}
+.s-other-name {
+    line-height: 0.2rem;
+}
+.s-other-txt dd {
+    line-height: 0.2rem;
+    margin-top: 2px;
+}
+.s-other-psg {
+    margin-top: 10px;
+    font-size: 0.16rem;
+    line-height: 0.24rem;
+}
+.s-owner-psg {
+    margin-top: 10px;
+    font-size: 0.16rem;
+    line-height: 0.24rem;
+    color: #708f86;
+}
+.s-other-ret{
+    margin-top: 0.1rem;
+}
+
+    </style>
+</head>
+<body style="font-size: 20px">
+<div style='margin:0 auto;width:0px;height:0px;overflow:hidden;'><!--增加结构 链接是微信分享缩略图，-->
+    <img src="" width='3.5rem'height="3.5rem">
+</div>
+    <header class="s_header ">
+        <div class=" clearfix pl10 pr10">
+            <div class="logo-box fl ">
+                <div class="fl logo"><img src="http://static.img.xywy.com/3g_sl/images/logo.png" alt="logo" /></div>
+                <div class="fl logo-txt ml5">
+                    <span class="logo-tit  db">巧育儿</span>
+                    <span class="db mt5">升级你的育儿</span>
+                </div>
+            </div>
+            <a class="down-load fr" id="hit" href="#">下载APP</a>
+        </div>  
+    </header>
+     <div class="s-hide-hd"></div>
+    <section>
+        <div class="banner">
+			<div id="gradual">
+			<div class="pl20 pr20 s-top">
+				<div class="clearfix">
+					<div class="fl s-zj-img pr">
+						<img src="http://app.qiaoyuer.com/{$data['photourl']}" alt="头像" />
+						<span class="ico-v pa"></span>
+					</div>
+					<dl class="s-zj-txt f14">
+						<dt class="s-zj-name ">{$data['nickname']}</dt>
+						<dd class="mt5">{$data['autograph']}</dd>
+					</dl>
+				</div>
+				<p class="s-top-indr ">{$data['title']}</p>
+				<div class="mt10 clearfix">
+					<span class="fl f14 s-top-mark">{$data['label']}</span>
+					<div class="fr s-top-data">
+						<div class="fl"><span class="ico-eye dib vm"></span><i class="dib vm ml6">{$data['visits']}</i></div>
+						<div class="fr"><span class="ico-ly dib vm"></span><i class="dib vm ml6">{$data['votecount']}</i></div>
+					</div>
+				</div>
+			</div>
+			</div>
+        </div>
+    </section>
+    <if condition="$data['type'] eq 1">
+
+
+        <section>
+            <div class="s-art">
+                <p>{$data['comment']}</p>
+				<if condition="$questioninfo[0]['title'] neq ''">
+					<div class="s-select">
+						<div class="s-select-con">
+							<foreach name='questioninfo' item='question'>
+								<div class="s-select-box">
+									<span class="db s-select-tit">{$key+1}.{$question['title']}(
+										<eq name="question['type']" value="1">单选<else/>多选</eq>
+										)
+									</span>
+									<div class="s-select-item">
+										<foreach name="question['reply']"  item='answer'> 
+											<div class="s-select-tag">
+												<span class="s-ck-ico dib vm"></span><span class="deepgray ml5 vm">{$answer}</span>
+											</div>
+										</foreach>
+									</div>
+								</div>
+							</foreach>
+							<div class="tc s-select-vote">投票</div>
+						</div>
+					</div>
+				</if>
+            </div>
+        </section>
+		<if condition="$discussinfo neq ''">
+			<section class="mt10">
+				<foreach name='discussinfo' item='discussinfo'>
+					<div class="s-talk-wrap">
+						<div class="s-other-con">
+							<div class="clearfix">
+								<div class="fl s-other-img pr">
+									<img src="http://app.qiaoyuer.com/{$discussinfo['userdata']['photourl']}" alt="头像" />
+									<span class="ico-v2 pa"></span>
+								</div>
+								<dl class="s-other-txt f14">
+									<dt class="s-other-name "><span class="f14 deepgray">{$discussinfo['userdata']['nickname']}</span>
+										<span class="ml20 c8">{$discussinfo['userdata']['condition']}
+										</span>
+									</dt>
+									<dd class="c8">{$discussinfo['userdata']['autograph']}</dd>
+								</dl>
+							</div>
+							<p class="deepgray s-other-psg">{$discussinfo['content']}
+							</p>    
+							<div class=" clearfix s-other-ret mt10">  /*去掉类名  mt10*/
+								<div class="fl s-talk-res">
+									<div class="s-zan dib clearfix">
+										<span class="up-hand1 dib fl"></span>
+										<span class="fl s-bdr1">|</span>
+										<span class="cf fl">{$discussinfo['laud']}</span>   
+									</div>
+								</div>
+								<div class="fl s-talk-res tc">
+									<div class="s-ruo dib clearfix">
+										<span class="dn-hand1 dib fl"></span>
+										<span class="fl s-bdr2">|</span>
+										<span class="col-blue fl">{$discussinfo['tread']}</span>    
+									</div>  
+								</div>
+								<div class="fl s-talk-res">
+									<div class="fr s-talk-box">
+										<span class="fl">评论</span>  
+										<span class="fl s-talk-num">{$discussinfo['replycount']}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<if condition="$discussinfo['owenrep'] neq ''">
+							<div class="s-owner-con">
+								<div class="clearfix">
+									<div class="fl s-zj-img pr">
+										<img src="http://app.qiaoyuer.com/{$data['photourl']}" alt="主人头像" />
+										<span class="ico-v pa"></span>
+									</div>
+									<dl class="s-owner-txt f14">
+										<dt class="s-owner-name ">{$data['nickname']}<span class="dib ml10 s-owner-mark">沙龙主人</span></dt>
+										<dd class="mt5 c8">{$data['autograph']}</dd>
+									</dl>
+								</div>
+								<p class="deepgray s-owner-psg">{$discussinfo['owenrep']['content']}</p>  
+								<div class=" clearfix s-owner-ret mt10">
+									<div class="fl s-talk-res">
+										<div class="s-zan dib clearfix">
+											<span class="up-hand2 dib fl"></span>
+											<span class="fl s-bdr2">|</span>
+											<span class="col-blue fl">{$discussinfo['owenrep']['laud']}</span>   
+										</div>
+									</div>
+									<div class="fl s-talk-res tc">
+										<div class="s-ruo dib clearfix">
+											<span class="dn-hand2 dib fl"></span>
+											<span class="fl s-bdr1">|</span>
+											<span class="cf fl">{$discussinfo['owenrep']['tread']}</span> 
+										</div>  
+									</div>
+									<div class="fl s-talk-res">
+										<div class="fr s-talk-box">
+											<span class="fl">评论</span>  
+											<span class="fl s-talk-num">{$discussinfo['owenrep']['replycount']}</span>
+										</div>   
+									</div>
+								</div>
+							</div>
+						</if>
+					</div>
+				</foreach>
+			</section>
+		</if>
+    
+    <else/>
+
+        <section class="s-more-sec">
+        <div class="s-show-more tc">
+            <span class="dib s-more-con">查看完整沙龙</span>
+            <span class="s-arrow dib"></span>
+        </div>
+        </section>
+
+        <section class="s-temp ">
+            <div class="mt10">
+                <foreach name='discussinfo' item='discuss'>
+                    <div class="s-talk-wrap">
+                        <div class="s-other-con">
+                            <div class="clearfix">
+                                <div class="fl s-other-img pr">
+                                    <img src="http://app.qiaoyuer.com/{$discuss['userdata']['photourl']}" alt="头像" />
+                                    <span class="ico-v2 pa"></span>
+                                </div>
+                                <dl class="s-other-txt f14">
+                                    <dt class="s-other-name "><span class="f14 deepgray">{$discuss['userdata']['nickname']}</span>
+                                        <span class="ml20 c8">{$discuss['userdata']['condition']}
+                                        </span>
+                                    </dt>
+                                    <dd class="c8">{$discuss['userdata']['autograph']}</dd>
+                                </dl>
+                            </div>
+                            <p class="deepgray s-other-psg">{$discuss['content']}
+                            </p>    
+                            <div class=" clearfix s-other-ret mt10">
+                                <div class="fl s-talk-res">
+                                    <div class="s-zan dib clearfix">
+                                        <span class="up-hand1 dib fl"></span>
+                                        <span class="fl s-bdr1">|</span>
+                                        <span class="cf fl">{$discuss['laud']}</span>   
+                                    </div>
+                                </div>
+                                <div class="fl s-talk-res tc">
+                                    <div class="s-ruo dib clearfix">
+                                        <span class="dn-hand1 dib fl"></span>
+                                        <span class="fl s-bdr2">|</span>
+                                        <span class="col-blue fl">{$discuss['tread']}</span>    
+                                    </div>  
+                                </div>
+                                <div class="fl s-talk-res">
+                                    <div class="fr s-talk-box">
+                                        <span class="fl">评论</span>  
+                                        <span class="fl s-talk-num">{$discuss['replycount']}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <if condition="$discuss['owenrep'] neq ''">
+                            <div class="s-owner-con">
+                                <div class="clearfix">
+                                    <div class="fl s-zj-img pr">
+                                        <img src="http://app.qiaoyuer.com/{$data['photourl']}" alt="主人头像" />
+                                        <span class="ico-v pa"></span>
+                                    </div>
+                                    <dl class="s-owner-txt f14">
+                                        <dt class="s-owner-name ">{$data['nickname']}<span class="dib ml10 s-owner-mark">沙龙主人</span></dt>
+                                        <dd class="mt5 c8">{$data['autograph']}</dd>
+                                    </dl>
+                                </div>
+                                <p class="deepgray s-owner-psg">{$discuss['owenrep']['content']}</p>  
+                                <div class=" clearfix s-owner-ret mt10">
+                                    <div class="fl s-talk-res">
+                                        <div class="s-zan dib clearfix">
+                                            <span class="up-hand2 dib fl"></span>
+                                            <span class="fl s-bdr2">|</span>
+                                            <span class="col-blue fl">{$discuss['owenrep']['laud']}</span>   
+                                        </div>
+                                    </div>
+                                    <div class="fl s-talk-res tc">
+                                        <div class="s-ruo dib clearfix">
+                                            <span class="dn-hand2 dib fl"></span>
+                                            <span class="fl s-bdr1">|</span>
+                                            <span class="cf fl">{$discuss['owenrep']['tread']}</span> 
+                                        </div>  
+                                    </div>
+                                    <div class="fl s-talk-res">
+                                        <div class="fr s-talk-box">
+                                            <span class="fl">评论</span>  
+                                            <span class="fl s-talk-num">{$discuss['owenrep']['replycount']}</span>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </if>
+                    </div>
+                </foreach>
+            </div>
+        </section>
+        <section class="mt10 s-more-sec">
+            <div class="s-show-more tc">
+                <span class="dib s-more-con">查看完整沙龙</span>
+                <span class="s-arrow dib"></span>
+            </div>
+        </section>
+        <!--点击查看完整沙龙显示的内容 begin-->
+        <script id="temp" type="text/html">
+            <div>
+                <div class="s-art">
+                    
+
+                    <section>
+                        <div class="s-art">
+                            <p>{$data['comment']}</p>
+                            <if condition="$questioninfo[0]['title'] eq ''">
+                            <else />
+                                <div class="s-select">
+                                    <div class="s-select-con">
+                                        <foreach name='questioninfo' item='question'>
+                                            <div class="s-select-box">
+                                                <span class="db s-select-tit">{$key+1}.{$question['title']}(
+                                                    <eq name="question['type']" value="1">单选<else/>多选</eq>
+                                                    )
+                                                </span>
+                                                <div class="s-select-item">
+                                                    <foreach name="question['reply']"  item='answer'> 
+                                                        <div class="s-select-tag">
+                                                            <span class="s-ck-ico dib vm"></span><span class="deepgray ml5 vm">{$answer}</span>
+                                                        </div>
+                                                    </foreach>
+                                                </div>
+                                            </div>
+                                        </foreach>
+                                        <div class="tc s-select-vote">投票</div>
+                                    </div>
+                                </div>
+                            </if>
+                        </div>
+                    </section>
+                </div>
+            </div>
+                    <section class="s-temp ">
+            <div class="mt10">
+                <foreach name='discussinfo' item='discuss'>
+                    <div class="s-talk-wrap">
+                        <div class="s-other-con">
+                            <div class="clearfix">
+                                <div class="fl s-other-img pr">
+                                    <img src="http://app.qiaoyuer.com/{$discuss['userdata']['photourl']}" alt="头像" />
+                                    <span class="ico-v2 pa"></span>
+                                </div>
+                                <dl class="s-other-txt f14">
+                                    <dt class="s-other-name "><span class="f14 deepgray">{$discuss['userdata']['nickname']}</span>
+                                        <span class="ml20 c8">{$discuss['userdata']['condition']}
+                                        </span>
+                                    </dt>
+                                    <dd class="c8">{$discuss['userdata']['autograph']}</dd>
+                                </dl>
+                            </div>
+                            <p class="deepgray s-other-psg">{$discuss['content']}
+                            </p>    
+                            <div class=" clearfix s-other-ret mt10">
+                                <div class="fl s-talk-res">
+                                    <div class="s-zan dib clearfix">
+                                        <span class="up-hand1 dib fl"></span>
+                                        <span class="fl s-bdr1">|</span>
+                                        <span class="cf fl">{$discuss['laud']}</span>   
+                                    </div>
+                                </div>
+                                <div class="fl s-talk-res tc">
+                                    <div class="s-ruo dib clearfix">
+                                        <span class="dn-hand1 dib fl"></span>
+                                        <span class="fl s-bdr2">|</span>
+                                        <span class="col-blue fl">{$discuss['tread']}</span>    
+                                    </div>  
+                                </div>
+                                <div class="fl s-talk-res">
+                                    <div class="fr s-talk-box">
+                                        <span class="fl">评论</span>  
+                                        <span class="fl s-talk-num">{$discuss['replycount']}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <if condition="$discuss['owenrep'] neq ''">
+                            <div class="s-owner-con">
+                                <div class="clearfix">
+                                    <div class="fl s-zj-img pr">
+                                        <img src="http://app.qiaoyuer.com/{$data['photourl']}" alt="主人头像" />
+                                        <span class="ico-v pa"></span>
+                                    </div>
+                                    <dl class="s-owner-txt f14">
+                                        <dt class="s-owner-name ">{$data['nickname']}<span class="dib ml10 s-owner-mark">沙龙主人</span></dt>
+                                        <dd class="mt5 c8">{$data['autograph']}</dd>
+                                    </dl>
+                                </div>
+                                <p class="deepgray s-owner-psg">{$discuss['owenrep']['content']}</p>  
+                                <div class=" clearfix s-owner-ret mt10">
+                                    <div class="fl s-talk-res">
+                                        <div class="s-zan dib clearfix">
+                                            <span class="up-hand2 dib fl"></span>
+                                            <span class="fl s-bdr2">|</span>
+                                            <span class="col-blue fl">{$discuss['owenrep']['laud']}</span>   
+                                        </div>
+                                    </div>
+                                    <div class="fl s-talk-res tc">
+                                        <div class="s-ruo dib clearfix">
+                                            <span class="dn-hand2 dib fl"></span>
+                                            <span class="fl s-bdr1">|</span>
+                                            <span class="cf fl">{$discuss['owenrep']['tread']}</span> 
+                                        </div>  
+                                    </div>
+                                    <div class="fl s-talk-res">
+                                        <div class="fr s-talk-box">
+                                            <span class="fl">评论</span>  
+                                            <span class="fl s-talk-num">{$discuss['owenrep']['replycount']}</span>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </if>
+                    </div>
+                </foreach>
+            </div>
+        </section>
+        </script>
+    </if>
+        <!--点击查看完整沙龙显示的内容  END!-->
+</body>
+       <script>
+        $(function(){
+            var tmp = $('#temp').html();
+            $('.s-more-sec').on('click',function(){  
+                $('.s-more-sec').hide();
+                $('.s-temp').html(tmp)
+            });   
+            // var wei = navigator.userAgent.toLowerCase();
+            //微信不打开应用
+            // if(!(wei.match(/MicroMessenger/i)=="micromessenger")){
+                //获取地址栏参数
+                var $_GET = (function(){
+                    var url = window.document.location.href.toString();
+                    var u = url.split("?");
+                    if(typeof(u[1]) == "string"){
+                        u = u[1].split("&");
+                        var get = {};
+                        for(var i in u){
+                            var j = u[i].split("=");
+                            get[j[0]] = j[1];
+                        }
+                        return get;
+                    } else {
+                        return {};
+                    }
+                })();
+                var data,string_data;
+                var relationtype = $_GET['type'];
+                if(relationtype == 1){
+                    data = {
+                        type : 11,
+                        sid: $_GET['id'],
+                    };
+                    string_data = 'type='+relationtype+"&sid="+$_GET['id'];
+                }
+                if(relationtype == 2){
+                    data = {
+                        type : 12,
+                        sid: $_GET['sid'],
+                        did: $_GET['id'],
+                        pid: $_GET['pid'],  
+                    };  
+                    string_data = 'type=12&sid='+$_GET['sid']+'&did='+$_GET['id'];
+                }
+                if(relationtype == 3){
+                    data = {
+                        type : 13,
+                        sid: $_GET['sid'],
+                        did: $_GET['id'],
+                    };
+                    string_data = 'type=13&sid='+$_GET['sid']+'&did='+$_GET['id']+'&pid='+$_GET['pid'];
+                }
+                //判断设备室iOS还是Android
+                var u = navigator.userAgent, app = navigator.appVersion;
+                var android = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端
+                var iPhone = u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1; //为iPhone 
+                //如果Android设备打开
+                if (android) {
+                    var ua = navigator.userAgent.toLowerCase();
+                    var t;
+                    var config = {
+                        /*scheme:必须*/
+                        scheme_Adr: "qiaoyuer://splash/?"+string_data,
+                        download_url: 'http://a.app.qq.com/o/simple.jsp?pkgname=com.xywy.qye',
+                        timeout: 600
+                    };
+                    function openclient() {
+                        var UA = navigator.userAgent.toLowerCase(); 
+                        if((UA.indexOf('qqbrowser')>-1)){
+                            alert("请在其他浏览器打开！");
+                        }else{
+                            var startTime = Date.now();
+                            var ifr = document.createElement('iframe'); 
+                            ifr.src = ua.indexOf('os') > 0 ? config.scheme_IOS : config.scheme_Adr;
+                            ifr.style.display = 'none';    
+                            document.body.appendChild(ifr);
+                            var t = setTimeout(function() {
+                                var endTime = Date.now();
+                                if (!startTime || endTime - startTime < config.timeout + 200) { 
+                                    window.location = config.download_url;
+                                } else {
+                                    window.close(); 
+                                }
+                            }, config.timeout);
+                            window.onblur = function() {
+                                clearTimeout(t);
+                            }
+                        }
+                    }  
+                    window.addEventListener("DOMContentLoaded", function(){
+                        document.getElementById("hit").addEventListener('click',openclient,false);
+                    }, false);
+                }
+                //iOS苹果设备
+                if (iPhone) {
+                    var appid = '847b4c1f0757677b'; 
+                    var params = {
+                        inapp_data : data,
+                        channels:["chanName1_chanType1_chanNumber1"],
+                        sender_id : "senderID",
+                        download_title : "这一次我们发现更好的育儿",
+                        download_msg : "这一次我们发现更好的育儿",
+                    };
+                    deepshare = new DeepShare(appid);
+                    deepshare.BindParams(params);
+                    document.getElementById('hit').addEventListener('click', function() {
+                        deepshare.Start();  // 开始跳转，调用后将立即跳转到目标（下载页面或APP内部）
+                    },false);
+                }
+            // }
+			document.addEventListener("DOMContentLoaded",function(){
+				var x=100*$(this).width()/375;
+				$("html").css({"font-size": x+'px'});
+			},false)
+        });
+        </script> 
+</html>
