@@ -1,10 +1,12 @@
 body{
+    position: relative;
     font-size: 0.14rem;
 }
 html, body {
     height: 100%;
     max-width: 750px;
     margin: 0 auto;
+    background: #efeeee;
 }
 img{
     margin:0 auto;
@@ -81,7 +83,7 @@ i{font-style: normal;}
     width:3.75rem;
     height: 0.6rem;
     border-bottom: 1px solid #ebe9ea;
-    background:#fff;
+    background:#efeeee;
     position:fixed;
     top:0;
     z-index:100;
@@ -136,6 +138,7 @@ i{font-style: normal;}
 }
 .courseCover img{
      max-width: 100%;
+     translateZ(0)
  }
 .playButton img{
     max-width: 100%;
@@ -157,11 +160,175 @@ i{font-style: normal;}
     padding: 0.19rem 0.2rem  0.15rem 0.2rem;
 }
 .caption h1{
-    font-size: 0.19rem;
+    font-size: 0.17rem;
     color: #373737;
     font-weight: 600;
 }
 .caption h1 span{
+    display: inline-block;
     padding-bottom:0.15rem;
     border-bottom: 2px solid #d0cfcf;
+}
+.course-browse{
+    padding:0.15rem 0;
+}
+.icon-list{
+    color: #939392;
+    font-size: 0.12rem;
+}
+.icon-list li{
+    display: inline-block;
+}
+.icon-list li:nth-child(1){
+    margin-right: 0.2rem
+}
+.icon-baby{
+    display: inline-block;
+    width: 13px;
+    height: 12px;
+    margin-right: 0.05rem;
+    background: url("../image/baby.png") no-repeat;
+    background-size: 13px 12px;
+}
+.icon-time{
+    display: inline-block;
+    width: 12px;
+    height：12px;
+    margin-right: 0.05rem;
+    background: url("../image/baby.png") no-repeat;
+    background-size: 12px 12px;
+}
+/*推荐课程*/
+.recommended{
+    background: #e0e0e0;
+    padding-top: 0.1rem;
+}
+.recommended-course{
+    background: #efeeee;
+    overflow: hidden;
+}
+.groom{
+    margin-top: 0.15rem;
+
+}
+.groom i{
+    display: inline-block;
+    width: 0.05rem;
+    height: 0.25rem;
+    background: #17a97d;
+}
+.recommended-text{
+    display: inline-block;
+    font-size: 0.19rem;
+    vertical-align: top;
+}
+.course-list{
+    margin: 0.15rem 0.1rem 0.2rem  0.1rem;
+
+}
+.course-list li{
+    width: 3.55rem;
+    height: 1.55rem;
+    position: relative;
+
+}
+.course-list li:nth-child(1){
+    margin-bottom: 0.1rem;
+}
+.course-list li img{
+    max-width: 100%;
+    border-radius: 0.05rem;
+}
+.recommended-course-title{
+    position: absolute;
+    top: 0.1rem;
+    left: 0.15rem;
+    color:#ffffff;
+}
+.recommended-course-title h2{
+   font-size: 0.19rem; 
+}
+.suitableAge{
+    display: inline-block;
+    margin-top: 0.1rem;
+    font-size:0.13rem;    
+    border: 1px solid #ffffff;
+    padding:0.01rem 0.1rem;
+    border-radius: 0.3rem;
+    font-weight: 600;
+    box-shadow: 0px 0px 1px 0 ;
+}
+/*模态框*/
+#content{   
+    width:3rem;
+    height: 1.5rem;
+    position: absolute;
+    top: -500px;   
+    left: 0.35rem;
+    background-color: #fff;  
+    border: 1px #B0B0B0 solid;   
+    border-radius: 7px;
+    box-shadow: 0px 4px 15px #707070;
+    transition: top 1s,width 1s,height 1s;
+    -webkit-transition: top 1s,width 1s,height 1s,opacity 1s;
+    font-size: .16rem;
+    z-index: 300;
+}
+.content-body{
+    margin-top: 0.3rem;
+    margin-left: 0.2rem;
+    margin-right: 0.02rem;
+    font-size: 0.18rem;
+    line-height: 0.25rem;
+}
+
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.4rem;
+    border-top: 1px #e5e5e5 solid;
+    overflow: hidden;
+}
+.btn-group {
+    overflow: hidden;
+    float: right;
+    width: 60%;
+    height: 0.4rem;
+    line-height: 0.4rem;
+}
+.btn-group span {
+    display: block;
+    float: right;
+    height: 0.25rem;
+    text-align: center;
+    line-height: .25rem;
+    border-radius: 3px;
+    margin-right:0.1rem; 
+    margin-top: 0.05rem;
+}
+.btn-group span.download {
+    background-color: #17a87d;
+    color: #fff;
+    font-size:.15rem;
+    border: 1px #17a87d solid;
+    padding: .01rem 0.05rem;
+
+}
+.btn-group span.close {
+    background-color: #fff;
+    color: #000;
+    font-size: .15rem;
+    border: 1px #CCCCCC solid;
+    padding: .01rem 0.05rem;
+}
+.mask{
+    background: rgba(27,24,24,0.3);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 101;
 }
