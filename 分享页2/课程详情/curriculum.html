@@ -39,9 +39,12 @@
     <div class="clear"></div>
 </div>
 <section class="banner">
-    <div class="courseCover">
-        <img src="image/banner.png" alt="课程封面">
-    </div>
+    <ul class="courseCover">
+        <li><img src="image/banner.png" alt="课程封面"></li>
+        <li><img src="image/banner.png" alt="课程封面"></li>
+        <li><img src="image/banner.png" alt="课程封面"></li>
+        <li><img src="image/banner.png" alt="课程封面"></li>
+    </ul>
     <div class="playButton">
         <img  src="image/play.png" alt="播放按钮">
     </div>
@@ -130,14 +133,29 @@ $(function(){
         $("#content").css({"top":"-500px"});
         $(".mask").css("display","none");
     }
-    document.addEventListener("touchstart",function(){
-
-
+    var startX,startY;
+    document.addEventListener("touchstart",function(e){
+        var obj=e.changedTouches[0];
+            startX=obj.clientX;
+            startY=obj.clientY;
     },false);
-    document,.addEventListener("touchmove",function(e){
-        if () {}
-        if()document.body.scrollTop
+    document.addEventListener("touchmove",function(e){
+        if(document.body.scrollTop==0){
+            var obj=e.changedTouches[0];
+            var moveX=obj.clientX-startX;
+            var moveY=obj.clientY-startY;
+            var isY=moveY-moveX
+            
+            if(isY&&moveY>0){
+                var num=moveY/400+1;
+                $(".courseCover").css({"transform": "rotateX("+-moveY/2+"deg)"});
+            } 
+        }        
                 
+    },false);
+    document.addEventListener("touchend",function (e){
+
+        $(".courseCover").css({"transition":"1s","transform":"rotateX(0deg)"});
     },false);
 })
 </script>

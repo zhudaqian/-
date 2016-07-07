@@ -118,8 +118,9 @@ i{font-style: normal;}
     display: block;
 }
 .logo-title{
+    color:#7A7A7A;
     display: block;
-    margin-top:0.05rem;
+    margin-top:0.01rem;
 }
 .down-load {
     height: 0.26rem;
@@ -136,15 +137,40 @@ i{font-style: normal;}
 .banner{/*封面*/
     position: relative;
 }
+.courseCover li{
+    position: absolute;
+}
+ .courseCover li:nth-child(2) {
+    top: -3.75rem;
+    transform-origin: bottom;
+    -webkit-transform-origin: bootom;
+    transform: rotateX(-90deg);
+    -webkit-transform: rotateX(-90deg);
+}
+ .courseCover li:nth-child(3) {
+    top: 3.75rem;
+    transform-origin: top;
+    -webkit-transform-origin: top;
+    transform: rotateX(90deg);
+    -webkit-transform: rotateX(90deg);
+}
+.courseCover li:nth-child(4) {
+    transform: translateZ(3.75rem);
+    -webkit-transform: translateZ(3.75rem);
+}
 .courseCover img{
      max-width: 100%;
-     translateZ(0)
+     transform-style: preserve-3d;
  }
 .playButton img{
     max-width: 100%;
 }
 .courseCover{
     position: relative;
+    transform-style: preserve-3d;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
+    width: 3.75rem;
+    height: 3.75rem;
+    transform-origin: 1.875rem 1.875rem 1.875rem;
 }
 
 .playButton{
@@ -331,4 +357,55 @@ i{font-style: normal;}
     left: 0;
     display: none;
     z-index: 101;
+}
+/*修改后（未与上面合并）*/
+.logo-title {
+    color: #7A7A7A;
+    display: block;
+    margin-top: 0.01rem;
+}
+#content {
+    overflow: hidden;
+    width: 2.7rem;
+    height: 1.45rem;
+    position: absolute;
+    top: -500px;
+    left: 0.5rem;
+    background-color: #fff;
+    border: 1px #B0B0B0 solid;
+    border-radius: 7px;
+    box-shadow: 0px 4px 15px #707070;
+    transition: top 1s,width 1s,height 1s;
+    -webkit-transition: top 1s,width 1s,height 1s,opacity 1s;
+    font-size: .16rem;
+    z-index: 300;
+}
+.content-footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0.45rem;
+    border-top: 1px #e5e5e5 solid;
+    overflow: hidden;
+}
+.btn-group {
+    overflow: hidden;
+    width: 100%;
+    height: 0.45rem;
+    line-height: 0.45rem;
+}
+.btn-group span {
+    display: inline-block;
+    width: 48%;
+    text-align: center;
+}
+.btn-group span.close {
+    background-color: #fff;
+    color: #000;
+    font-size: .14rem;
+}
+.btn-group span.download {
+    color: #161313;
+    font-size: .14rem;
+    border-left: 1px #d2d3d2 solid;
 }
