@@ -136,6 +136,7 @@ i{font-style: normal;}
 /*课程介绍*/
 .banner{/*封面*/
     position: relative;
+    perspective: 200px;
 }
 .courseCover li{
     position: absolute;
