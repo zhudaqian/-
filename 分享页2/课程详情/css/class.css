@@ -408,5 +408,40 @@ i{font-style: normal;}
 .btn-group span.download {
     color: #161313;
     font-size: .14rem;
-    border-left: 1px #d2d3d2 solid;
+    border-left: 1px #d2d3d2 solid;  
+}
+
+
+
+
+
+// 修改
+ 82
+.s_header{
+ background: #ffffff
+};
+169
+// border-bottom: 1px solid #d0cfcf;
+164
+// .caption h1 {
+//     font-size: 0.19rem;
+//     color: #373737;
+//     font-weight: 600;
+// }
+新增
+.sunmmary{
+    color: #585858;
+    font-size: 0.15rem;
+}
+222
+.recommended-text {
+    display: inline-block;
+    font-size: 0.20rem;
+    vertical-align: top;
+    color: #191919;
+}
+177
+.icon-list {
+    color: #484848;
+    font-size: 0.12rem;
 }

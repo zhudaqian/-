@@ -509,3 +509,37 @@ input[type="radio"] {
     50% {opacity: 1;transform: translate(0,0);}
     100% {opacity: 0;transform: translate(0,5px);}
 }
+
+
+/*头部*/
+
+.logo-txt {
+    font-size: 0.14rem;
+    line-height: 0.14rem;
+    margin-left: 0.14rem;
+}
+.logo-tit {
+    color: #17a87d;
+    display: block;
+    font-weight: 600;
+    margin-top: 0.04rem;
+}
+.logo-title {
+    color: #7A7A7A;
+    display: block;
+    margin-top: 0.05rem;
+}
+//再修改
+310
+.btn-group span.close {
+    background-color: #fff;
+    color: #007efb;
+    border-left: 1px rgba(210,210,210,0.5) solid;
+    font-size: .16rem;
+}
+287
+border-top:rgba(210,210,210,0.5)
+306{
+    color:#007efb;
+    font-size: .16rem;
+}

@@ -27,15 +27,4 @@ $(function() {
         flag1 = true;
     })
 });
-(function(callback) {
-    for (var i = 0; i < 10; i++) {
-        if (i = 10) {
-            console.log(1)
-        }
-        callback();
-    }
-})(callback);
 
-function callback() {
-    console.log(2)
-}
